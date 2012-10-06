@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html">
+		<title>SimpleTree Example</title>
+		
+		
+		<!-- IGNORE: Not what you came here for... -->
+		<style type="text/css">body{width:700px;margin-left:auto;margin-right:auto;background:#F8F8F8;color:#636363;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;line-height:20px;}h2{font-size:25px;}h2{color:#414141;}h4{font-size:19px;}#myTree{margin-top:40px;}pre.prettyprint{border:0px!important;}.gist-meta{display:none;}a{color:inherit;}a:hover{text-decoration:none;}pre{border:1px solid #DEDEDE;background:#f8f8ff;color:#333;}</style>
+		<!-- CONTINUE: The real stuff :) -->
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		
+		<!-- SimpleTree -->
+		<link type="text/css" rel="stylesheet" href="./css/tree.min.css" />
+		<script type="text/javascript" src="../files/tree.js"></script>
+		
+		<script type="text/javascript">
+			var tree = [
+				["Parent", "#",
+					[
+						["Item 1", "#"],
+						["Item 2", "#",
+							[
+								["Item 1", "#"],
+								["Item 2", "#"],
+								["Item 3", "#"],
+								["Item 4", "#",
+									[
+										["Item 1", "#"],
+										["Item 2", "#"]
+									]
+								]
+							]
+						],
+						["Item 3", "#",
+							[
+								["Item 1", "#"],
+								["Item 2", "#"]
+							]
+						],
+						["Item 4", "#"],
+						["Item 5", "#",
+							[
+								["Item 1", "#",
+									[
+										["Item 1", "#"],
+										["Item 2", "#"]
+									]
+								]
+							]
+						],
+						["Item 6", "#"],
+						["Item 7", "#"]
+					]
+				]
+			];
+
+			$(function () {
+				$("#myTree").simpleTree({
+					'structure': tree
+				});
+			});
+		</script>
+		
+	</head>
+	<body onload="prettyPrint()">
+	
+		<h2>SimpleTree</h2>
+		<h5>By Jacob Marshall</h5>
+		
+		<p>
+			SimpleTree is an extremely efficient plugin. It takes jQuery and mixed some incredible logical CSS, and packs a huge punch. SimpleTree was originally developed for educational purposes only, but I though that I may as well release it, because it would probably end up going to waste otherwise.
+		</p>
+		
+		<p>
+			<div id="myTree"></div>
+		</p>
+		
+		<p>&nbsp;</p>
+		
+		<p>
+			<h4>jQuery Markup</h4>
+		</p>
+		
+		<p>
+			Below is an example of the jQuery markup to create a very simple tree structure in an element with the id of 'myTree'.
+		</p>
+		
+		<p>
+			<script src="https://gist.github.com/3843518.js?file=gistfile1.js"></script>
+		</p>
+		
+		<p>
+			<h4>SimpleTree Functions</h4>
+		</p>
+		
+		<p>
+			<script src="https://gist.github.com/3843596.js?file=gistfile1.js"></script>
+		</p>
+		
+		<p>
+			<h4>HTML Generated Markup</h4>
+		</p>
+		
+		<p>Below is an example of the HTML markup that the plugin generates automatically using your input.</p>
+		
+		<p>
+			<script src="https://gist.github.com/3843530.js?file=gistfile1.html"></script>
+		</p>
+		
+		<p>
+			<h4>Credits...</h4>
+		</p>
+		
+		<p>
+			<ul>
+				<li><strong><a href="http://www.twitter.com/jacobcmarshall" target="_blank">Jacob Marshall</a></strong> For creating the source code to this plugin, and releasing it to the public.</li>
+				<li><strong><a href="http://www.jquery.com/" target="_blank">The jQuery Team</a></strong> For creating the source code to this plugin, and releasing it to the public.</li>
+				<li><strong><a href="http://glyphicons.com/" target="_blank">Glyphicons</a></strong> For creating the amazing example tree images.</li>
+			</ul>
+		</p>
+		
+		<p>
+			<h4>Licence</h4>
+		</p>
+		
+		<p>
+			<pre>
+			
+                     DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                             Version 2, December 2004
+         
+          Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+
+          Everyone is permitted to copy and distribute verbatim or modified
+          copies of this license document, and changing it is allowed as long
+          as the name is changed.
+
+                     DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+            TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+           0. You just DO WHAT THE FUCK YOU WANT TO.
+			</pre>
+		</p>
+		
+		<p>&nbsp;</p>
+	
+	</body>
+</html>

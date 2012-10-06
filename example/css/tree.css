@@ -1,0 +1,86 @@
+.tree-root,
+.tree-root ul
+{
+	padding: 0;
+	margin: 0;
+}
+
+.tree-root li
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	list-style-type: none;
+	margin: 4px 0;
+	padding-left: 20px;
+	line-height: 20px;
+}
+
+.tree-root li.parent > span
+{
+	color: #777;
+	padding-left: 5px;
+}
+
+.tree-root li.parent > span:before
+{
+	content: "(";
+}
+
+.tree-root li.parent > span:after
+{
+	content: ")";
+}
+
+.tree-root li > a
+{
+	margin-left: -20px;
+	padding-left: 40px;
+	background: url(../img/folder-closed.png) no-repeat 20px 0px;
+}
+
+.tree-root li > a.selected
+{
+	color: #333;
+	font-weight: bold;
+}
+
+.tree-root li.parent.open > a,
+.tree-root a:hover
+{
+	color: #333;
+	text-decoration: underline;
+}
+
+.tree-root li.parent.open > a
+{
+	background-image: url(../img/folder-open.png);
+}
+
+.tree-root li.parent > ul
+{
+	display: none;
+}
+
+.tree-root li.parent
+{
+	background: url(../img/parent-closed.png) no-repeat 3px 5px;
+}
+
+.tree-root li.parent.open
+{
+	background-image: url(../img/parent-open.png);
+	background-position: 1px 6px;
+}
+
+.tree-root li.parent.open > ul
+{
+	display: block;
+}
+
+.tree-root a,
+.tree-root a:active,
+.tree-root a:visited
+{
+	color: #08C;
+	text-decoration: none;
+}
